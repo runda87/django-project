@@ -1,12 +1,9 @@
 <nav>
-    <div class="bg-img">
-        <div class="container">
-            <div class="topnav">
-                <a href="{% url 'news:index' %}">Home</a>
-                <a href="#">username</a>
-                <a href="#">Logout</a>
-                <a href="#">Login</a> 
-            </div>
-        </div>
+    <div class="topnav">
+        <a href="{% url 'news:index' %}">Home</a>
+        <a href="#">username</a>
+        <a href="#">Logout</a>
+        <a href="#">Login</a> 
+        <a id="wns" href="{% url 'news:newStory' %}">Write New Story</a>
     </div>
 </nav>

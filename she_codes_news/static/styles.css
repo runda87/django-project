@@ -1,43 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 body {
     background-color: #e4c5e4;
 }
 
 #banner {
-    margin: auto;
+    object-fit: cover;
+    display: block;
     height: auto;
-    width: 1400px;
-    /* position: centre;
-    padding: 3px;
-    object-fit: cover; */
+    width: 1350px;
+    margin: auto;
+    display: block;
+    float: left;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #801384;
-}
 
-/* img {
-    filter: grayscale(100%);
-} */
 
 h1 {
-    font-family: 'Montserrat Subrayada', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     text-decoration: none;
     font-size: 4rem;
     margin: 0;
 }
 
 h2 {
-   font-family: 'Montserrat Subrayada', sans-serif; 
+   font-family: 'DM Sans', sans-serif; 
 }
 
 h3 {
     font-size: 2rem;
     margin: 0;
+    font-family: 'DM Sans', sans-serif;
 }
 
 #header-text {
@@ -45,21 +38,6 @@ h3 {
     display: flex;
 }
 
-.bg-img {
-    /* The image used */
-    background-image: url("../static/she_codes_news/images/b.gif");
-    min-height: 380px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.container {
-    position: absolute;
-    margin: 20px;
-    width: auto;
-}
 
 .topnav {
     overflow: hidden;
@@ -73,11 +51,16 @@ h3 {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 15px;
+    font-family: 'DM Sans', sans-serif;
 }
   
 .topnav a:hover {
     background-color: #f59818;
-    color: black;
+    color: #f2f2f2;
+}
+
+#wns {
+    float: right;
 }
 
 a {
@@ -87,5 +70,5 @@ a {
 }
 
 a, p {
-    font-family: monospace;
+    font-family: 'DM Sans', sans-serif;
 }
