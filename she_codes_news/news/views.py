@@ -2,6 +2,8 @@ from django.views import generic
 from django.urls import reverse_lazy
 from .forms import StoryForm
 from .models import NewsStory
+from django.shortcuts import render
+# from .forms import ImageForm
 
 
 class AddStoryView(generic.CreateView):
@@ -31,3 +33,15 @@ class StoryView(generic.DetailView):
     model = NewsStory
     template_name = 'news/story.html'
     context_object_name = 'story'
+
+# def image_upload_view(request):
+#     if request.method == 'POST':
+#         form = ImageForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             form.save()
+#             img_obj = form.instance
+#             return render(request, 'index.html', {'form': form, 'img_obj': img_obj})
+#     else:
+#         form = ImageForm()
+#     return render(request, 'index.html', {'form': form})       
+

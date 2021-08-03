@@ -6,12 +6,11 @@ body {
 
 #banner {
     object-fit: cover;
-    display: block;
     height: auto;
-    width: 1350px;
-    margin: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
-    float: left;
 }
 
 
@@ -63,7 +62,7 @@ h3 {
     float: right;
 }
 
-a {
+/* a {
     margin: 2px;
     text-decoration: none;
     color: #000;
@@ -71,4 +70,4 @@ a {
 
 a, p {
     font-family: 'DM Sans', sans-serif;
-}
+} */

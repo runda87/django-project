@@ -1,7 +1,10 @@
 <div class="story-card" id="story-card-{{ position }}">
     <a href="{% url 'news:story' story.id %}">
 
-            <img src="{{ story.story_image }}">
+    {% if story.image %}
+        <img src="{{ story.image.url }}">
+    {% endif %}
+        
 
         <div class="story-card-text">
             <h3>{{ story.title }}</h3>

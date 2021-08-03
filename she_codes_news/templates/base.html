@@ -16,9 +16,9 @@
     <body>
         <header>
             <div id="header-text">
-                <a id="header-link" href="{% url 'news:index' %}">
+                <!-- <a id="header-link" href="{% url 'news:index' %}"> -->
                     <img id="banner" src="{% static 'she_codes_news/images/b1.gif' %}">
-                </a>
+                <!-- </a> -->
             </div>
         </header>
             <div>
@@ -29,5 +29,8 @@
         {% block content%}
         {% endblock %}
     </body>
+    <footer>
+        <img id="banner" src="{% static 'she_codes_news/images/1.png' %}">
+    </footer>
 </html>
 
