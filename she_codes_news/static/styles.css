@@ -41,16 +41,16 @@ h3 {
 .topnav {
     overflow: hidden;
     background-color: #862aa3;
+    position: relative;
 }
   
 .topnav a {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
     font-size: 15px;
     font-family: 'DM Sans', sans-serif;
+    padding: 10px;
 }
   
 .topnav a:hover {
@@ -62,12 +62,3 @@ h3 {
     float: right;
 }
 
-/* a {
-    margin: 2px;
-    text-decoration: none;
-    color: #000;
-}
-
-a, p {
-    font-family: 'DM Sans', sans-serif;
-} */

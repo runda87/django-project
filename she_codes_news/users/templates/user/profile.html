@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+<div id="profile-wrapper">
+    <h2>{{ user.username }}</h2>
+    <h4>{{ user.email }}</h4>
+    {% for story in user.stories.all %}
+    {% include "news/storyCard.html" with story=story position=forloop.counter %}
+    {% endfor %}
+
+</div>
+
+{% endblock %}
