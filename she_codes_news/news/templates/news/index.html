@@ -10,7 +10,7 @@
 
     <!-- <a href="{% url 'news:newStory' %}">Write New Story.</a> -->
   
-    <h2>Latest News</h2>
+    <h2 id="heading">{ Latest Posts }</h2>
 
     <div id="latest-stories">
         {% if latest_stories %}
@@ -21,6 +21,8 @@
             <p>No stories are available.</p>
         {% endif %}
     </div>
+
+    <h2 id="heading">< All Post ></h2>
 
     <div id="all-stories">
         {% if latest_stories %}

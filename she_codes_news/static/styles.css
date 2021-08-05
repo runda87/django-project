@@ -2,6 +2,7 @@
 
 body {
     background-color: #e4c5e4;
+    padding: 15px;
 }
 
 #banner {
@@ -24,6 +25,7 @@ h1 {
 
 h2 {
    font-family: 'DM Sans', sans-serif; 
+   text-align: center;
 }
 
 h3 {
@@ -60,5 +62,14 @@ h3 {
 
 #wns {
     float: right;
+}
+.logo {
+    border-radius: 70%;
+    border: 1px solid black;
+    max-width: 10%;
+    height: auto;  
+    display: inline-block;
+    margin-left: 70px;
+    margin-right: auto;
 }
 
