@@ -8,6 +8,9 @@
     padding: 5px;
     background-color: #f3e3f3;
     text-align: center;
+    flex-basis: 32%;
+    flex-grow: 1;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .story-card img {
@@ -18,16 +21,12 @@
 }
 
 #latest-stories {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 1px 1px 1px;
     grid-template-areas: "left-1 main-2 right-3";
-    max-height: 500px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'DM Sans', sans-serif;
     margin-right: 35px;
     margin-left: 35px;
-    grid-template-columns: 1fr 1fr 1fr;
-    
 }
 
 #story-card-1 {
@@ -36,7 +35,6 @@
 
 #story-card-2 {
     grid-area: main-2;
-    
 }
 
 #story-card-3 {
@@ -45,8 +43,7 @@
 
 
 #story-card-2 a,
-#story-card-3 a,
-#story-card-4 a {
+#story-card-3 a {
     font-family: 'DM Sans', sans-serif;
     display: flex;
     max-height: 120px;
@@ -56,8 +53,7 @@
 }
 
 #story-card-2 .story-card-text h3,
-#story-card-3 .story-card-text h3,
-#story-card-4 .story-card-text h3 {
+#story-card-3 .story-card-text h3 {
     font-size: 16px;
     font-family: 'DM Sans', sans-serif;
     text-align: center;
@@ -66,7 +62,7 @@
 #story-card-2 .story-card-text h4,
 #story-card-3 .story-card-text h4,
 #story-card-4 .story-card-text h4 {
-    font-size: 12px;
+    font-size: 16px;
     font-family: 'DM Sans', sans-serif;
     text-align: center;
 }
@@ -122,4 +118,6 @@
     font-size: 15px;
     display: flex;
     justify-content: space-evenly;
+
 }
+

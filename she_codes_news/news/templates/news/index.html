@@ -8,10 +8,8 @@
 
 {% block content %}
 
-    <!-- <a href="{% url 'news:newStory' %}">Write New Story.</a> -->
   
     <h2 id="heading">{ Latest Posts }</h2>
-
     <div id="latest-stories">
         {% if latest_stories %}
             {% for story in latest_stories %}
@@ -21,9 +19,9 @@
             <p>No stories are available.</p>
         {% endif %}
     </div>
-
+    <br>
     <h2 id="heading">{ All Posts }</h2>
-
+    <br>
     <div id="all-stories">
         {% if latest_stories %}
             {% for story in all_stories %}
