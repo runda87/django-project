@@ -65,12 +65,12 @@ h3 {
 }
 .logo {
     border-radius: 40%;
-    border: 1px solid black;
-    max-width: 10%;
+    max-width: 70px;
     height: auto;  
-    display: inline-block;
-    margin-left: 70px;
-    margin-right: auto;
 }
 
+.logos {
+    display: flex;
+    justify-content: space-evenly;
+}
 

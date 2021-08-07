@@ -1,9 +1,9 @@
 from django.views import generic
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from .forms import StoryForm
 from .models import NewsStory
 from django.shortcuts import render
-# from .forms import ImageForm
+from django.views.generic.edit import UpdateView, DeleteView
 
 
 class AddStoryView(generic.CreateView):
@@ -15,6 +15,18 @@ class AddStoryView(generic.CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+class StoryUpdateView(UpdateView):
+    model = NewsStory
+    fields = ['title', 'pub_date', 'content', 'image']
+    template_name_suffix = '_update_form'
+    def get_success_url(self):
+        return reverse('news:story', kwargs={'pk':self.object.pk})
+
+
+class StoryDeleteView(DeleteView):
+    model = NewsStory
+    success_url = reverse_lazy('news:index')
 
 class IndexView(generic.ListView):
     template_name = 'news/index.html'
@@ -34,14 +46,5 @@ class StoryView(generic.DetailView):
     template_name = 'news/story.html'
     context_object_name = 'story'
 
-# def image_upload_view(request):
-#     if request.method == 'POST':
-#         form = ImageForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             form.save()
-#             img_obj = form.instance
-#             return render(request, 'index.html', {'form': form, 'img_obj': img_obj})
-#     else:
-#         form = ImageForm()
-#     return render(request, 'index.html', {'form': form})       
+
 

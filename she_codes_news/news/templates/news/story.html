@@ -2,17 +2,23 @@
 {% load static %}
 
 {% block stylesheets %}
-<link rel="stylesheets" type="text/css" href="{% stactic 'news/styles.css' %">
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
 {% endblock %}
 
 {% block content %}
 
 <div id="story-wrapper">
-    <h2>{{ story.title }}</h2>
-    <h4><a href="{% url 'users:profile' story.author.pk %}">{{ story.author }}</a></h4>
+    <h2 id="heading">{{ story.title }}</h2>
+    <div id="subtitle">
+        <h4><a href="{% url 'users:profile' story.author.pk %}">{{ story.author }}</a></h4>
+        {% if request.user == story.author %}
+        <h4><a href="{% url 'news:editStory' pk=story.pk %}">Edit</a></h4>
+        <h4><a href="{% url 'news:deleteStory' pk=story.pk %}">Delete</a></h4>
+        {% endif %}
+    </div>
     <div id="story-content">
         {% if story.image %}
-        <img src="{{ story.image.url }}">
+        <img src="{{ story.image.url }}"><BR CLEAR=”left” /> 
         {% endif %}
         {{ story.content|linebreaks }}
     </div>
