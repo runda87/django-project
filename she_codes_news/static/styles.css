@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 
 body {
-    background-color: #e4c5e4;
+    background-color: #f3edf3;
     padding: 15px;
 }
 
@@ -64,7 +64,7 @@ h3 {
     float: right;
 }
 .logo {
-    border-radius: 70%;
+    border-radius: 40%;
     border: 1px solid black;
     max-width: 10%;
     height: auto;  
@@ -72,4 +72,5 @@ h3 {
     margin-left: 70px;
     margin-right: auto;
 }
+
 
